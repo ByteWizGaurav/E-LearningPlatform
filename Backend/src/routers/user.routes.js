@@ -8,5 +8,11 @@ router.route('/health').get((__, res) => {
         status: 200
     })
 })
+router.route('/test/:id').post((req, __) => {
+    const {id} = req.params;
+    res.json({
+        message: id
+    })
+})
 
 export default router;
